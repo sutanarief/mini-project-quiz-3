@@ -79,5 +79,5 @@ func main() {
 	authorized.POST("/books", controllers.InsertBook)
 	authorized.PUT("/books/:id", controllers.UpdateBook)
 	authorized.DELETE("/books/:id", controllers.DeleteBook)
-	router.Run(":8080")
+	router.Run(":" + os.Getenv("PORT"))
 }
